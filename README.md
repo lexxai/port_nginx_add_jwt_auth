@@ -1,10 +1,10 @@
-# FreeBSD port of NGINX server. Added 3rd party jwt auth module.
+# FreeBSD NGINX server port. Added 3rd party jwt auth module.
 
 ## Source of module:
 [GitHub - kjdev/nginx-auth-jwt: Nginx module for the authenticate using JWT](https://github.com/kjdev/nginx-auth-jwt)
 
 
-## PATCH FreeBSD port of NGINX Server
+## PATCH for FreeBSD NGINX server port
 
 1. Fecth ports tree 
 `portsnap auto`
