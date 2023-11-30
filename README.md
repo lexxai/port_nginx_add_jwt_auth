@@ -72,10 +72,10 @@ check if exist file  `/usr/local/libexec/nginx/ngx_http_auth_jwt_module.so`
 --- Makefile.options.desc.or	2023-11-29 22:59:42.373238000 -0500
 +++ Makefile.options.desc	2023-11-29 20:41:06.532553000 -0500
 @@ -118,3 +118,4 @@
- WWW_DESC=		Enable html sample files
- XSS_DESC=		3rd party xss module
- WEBSOCKIFY_DESC=	3rd party websockify module
-+JWT_AUTH_DESC=		3rd party jwt auth module
+ WWW_DESC=			Enable html sample files
+ XSS_DESC=			3rd party xss module
+ WEBSOCKIFY_DESC=		3rd party websockify module
++JWT_AUTH_DESC=			3rd party jwt auth module
 ```
 
 ### pkg-plist
@@ -109,10 +109,12 @@ check if exist file  `/usr/local/libexec/nginx/ngx_http_auth_jwt_module.so`
 
 
 #### Hash sum
-make 
+make makesum 
 
 
-make generate-plist
+## RESTORE PORT CHANGES
+portsnap extract www/nginx
+
 
 # TODO: I still need to test the script in action.
 
