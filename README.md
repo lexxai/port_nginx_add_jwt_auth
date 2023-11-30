@@ -37,6 +37,49 @@ make install
 
 check if exist file  `/usr/local/libexec/nginx/ngx_http_auth_jwt_module.so`
 
+![](img/build-01.png)
+
+
+
+# NGINX Config
+
+[examples](https://github.com/kjdev/nginx-auth-jwt#configuration)
+
+nginx.conf
+```
+load_module /usr/local/libexec/nginx/ngx_http_auth_jwt_module.so;
+
+...
+	location /token_protected {
+		auth_jwt "closed site";
+		auth_jwt_key_file .jwt_keyfile.json keyval;
+		auth_jwt_validate_exp on;
+		auth_jwt_validate_iat on;
+		auth_jwt_validate_sig on;
+		auth_jwt_validate_sub on;
+		....
+
+```
+Some note by use token:
+- `auth_jwt` can't be used in `if` conditions
+- When used `auth_jwt "closed site";` then module wait header in format: `Authorization: Bearer token`
+- When used `auth_jwt "closed site" token=$http_authorization;` then module wait header in format: `Authorization: token`
+
+Format `jwt_keyfile.json keyval`:
+```
+{"kid":"some_sekeret_key"}
+```
+
+`auth_jwt` can't be used in `if` conditions
+
+Can check JWT payloads by set headers and use env  `$jwt_claims`:
+``` 
+add_header 'JWT-PAYLOAD' $jwt_claims;
+```
+
+
+
+
 
 ## How created patch files
 
