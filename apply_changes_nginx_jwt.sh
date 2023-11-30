@@ -1,7 +1,7 @@
 #!/bin/sh
 
 PORT_DIR=/usr/ports/www/nginx
-PATCHES_DIR=$(pwd)/pathes/
+PATCHES_DIR=$(pwd)/patches/
 
 cd ${PORT_DIR}
 
