@@ -1,0 +1,10 @@
+--- pkg-plist.or        2023-05-18 02:30:57.000000000 -0400
++++ pkg-plist   2023-11-29 22:43:57.342592000 -0500
+@@ -88,6 +88,7 @@
+ %%DSO%%%%VTS%%libexec/nginx/ngx_http_vhost_traffic_status_module.so
+ %%DSO%%%%WEBSOCKIFY%%libexec/nginx/ngx_http_websockify_module.so
+ %%DSO%%%%XSS%%libexec/nginx/ngx_http_xss_filter_module.so
++%%DSO%%%%JWT_AUTH%%libexec/nginx/ngx_http_auth_jwt_module.so
+ %%HTTP_PERL%%%%SITE_ARCH%%/auto/nginx/nginx.so
+ %%HTTP_PERL%%%%SITE_ARCH%%/nginx.pm
+ sbin/nginx
