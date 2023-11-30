@@ -108,5 +108,7 @@ check if exist file  `/usr/local/libexec/nginx/ngx_http_auth_jwt_module.so`
 ```
 
 
+# TODO: I still need to test the script in action.
+
 
 
