@@ -11,14 +11,14 @@
 
 2. Apply pathes for files on folder  `/usr/ports/www/nginx`
 
-`patch -p1 < changes.diff`
+`patch -p1 < changes.patch`
 
 ### Automatic script path
 ```
 cd ~
 git clone https://github.com/lexxai/port_nginx_add_jwt_auth
 cd ./port_nginx_add_jwt_auth
-chmod +x apply_changes_nginx_jwt.sh
+chmod +x ./apply_changes_nginx_jwt.sh
 ./apply_changes_nginx_jwt.sh
 ```
 
