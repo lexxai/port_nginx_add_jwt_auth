@@ -159,7 +159,4 @@ make makesum
 portsnap extract www/nginx
 
 
-# TODO: I still need to test the script in action.
-
-
 
